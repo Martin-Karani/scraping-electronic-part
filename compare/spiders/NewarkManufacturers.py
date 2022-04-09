@@ -6,7 +6,6 @@ class NewarkmanufacturersSpider(scrapy.Spider):
     name = 'NewarkManufacturers'
     allowed_domains = ['www.newark.com']
     start_urls = ['https://www.newark.com/manufacturers']
-    print('hello world')
 
     def parse(self, response):
         for link in response.css('div.manuSection li a::attr(href)'):
